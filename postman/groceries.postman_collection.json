@@ -46,9 +46,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{local}}/notes/",
+					"raw": "{{prod}}/notes/",
 					"host": [
-						"{{local}}"
+						"{{prod}}"
 					],
 					"path": [
 						"notes",
@@ -64,9 +64,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{local}}/notes",
+					"raw": "{{prod}}/notes",
 					"host": [
-						"{{local}}"
+						"{{prod}}"
 					],
 					"path": [
 						"notes"
@@ -282,13 +282,11 @@
 	"variable": [
 		{
 			"key": "local",
-			"value": "http://localhost:8000",
-			"type": "default"
+			"value": "http://localhost:8000"
 		},
 		{
 			"key": "prod",
-			"value": "groceries-be-production.up.railway.app/",
-			"type": "default"
+			"value": "https://groceries-api-prod.up.railway.app"
 		}
 	]
 }

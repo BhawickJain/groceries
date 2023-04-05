@@ -36,7 +36,7 @@ services:
       args:
         PORT: 8000
         JUPYTERLAB_PORT: 8888
-        DATABASE_URL: "postgres://postgres:postgres@db:5432/postgres"
+        DATABASE_URL: "postgresql://postgres:postgres@db:5432/postgres"
       dockerfile: docker/Dockerfile.dev
     entrypoint: sh -c "bash scripts/groceries-api-entrypoint.sh && tail -f /dev/null"
     ports:
@@ -64,7 +64,7 @@ services:
       # Named volume persistence for database
       - db:/var/lib/postgresql/data
       # Initial Query to build database tables and mock data
-      - ../db/create-tables-mock-data.sql:/docker-entrypoint-initdb.d/create-tables-mock-data.sql
+      # - ../db/create-tables-mock-data.sql:/docker-entrypoint-initdb.d/create-tables-mock-data.sql
 networks:
   overlay:
 volumes:

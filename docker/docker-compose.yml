@@ -64,7 +64,7 @@ services:
       # Named volume persistence for database
       - db:/var/lib/postgresql/data
       # Initial Query to build database tables and mock data
-      # - ../db/create-tables-mock-data.sql:/docker-entrypoint-initdb.d/create-tables-mock-data.sql
+      - ../db/create-tables-mock-data.sql:/docker-entrypoint-initdb.d/create-tables-mock-data.sql
 networks:
   overlay:
 volumes:

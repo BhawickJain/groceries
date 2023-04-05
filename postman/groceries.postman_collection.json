@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7d53ffef-3b07-4c63-9be9-f80f5d0d0446",
+		"_postman_id": "26fab741-9ddf-4a76-b4a4-c42df167d917",
 		"name": "groceries",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -38,7 +38,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"text\": \"Setup DB Connection\",\n    \"completed\": true\n}",
+					"raw": "{\n    \"text\": \"Setup DB Connection\",\n    \"is_completed\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,6 +70,189 @@
 					],
 					"path": [
 						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-notes_200_skip2_limit_10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/notes/?skip=2&limit=10",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"notes",
+						""
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-item_404_not_found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/items/5",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"items",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/items/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-users-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/users/2",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/users/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"hfefffffllffo@fmfail.com\",\n    \"password\": \"1234!yolo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-user-item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"a User 3f itemm\",\n    \"description\": \"this is my first item for a user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users/2/items",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"2",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-user-item-null-description",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"a User Leo itemm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users/2/items",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"2",
+						"items"
 					]
 				}
 			},

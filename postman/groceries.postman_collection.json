@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "26fab741-9ddf-4a76-b4a4-c42df167d917",
+		"_postman_id": "d869f579-c747-406f-8d35-bfe3474c8122",
 		"name": "groceries",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -46,9 +46,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{prod}}/notes/",
+					"raw": "{{local}}/notes/",
 					"host": [
-						"{{prod}}"
+						"{{local}}"
 					],
 					"path": [
 						"notes",
@@ -64,9 +64,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{prod}}/notes",
+					"raw": "{{local}}/notes",
 					"host": [
-						"{{prod}}"
+						"{{local}}"
 					],
 					"path": [
 						"notes"
@@ -182,7 +182,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"hfefffffllffo@fmfail.com\",\n    \"password\": \"1234!yolo\"\n}",
+					"raw": "{\n    \"email\": \"leo@gmail.com\",\n    \"password\": \"1234!yolo\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -217,13 +217,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{local}}/users/2/items",
+					"raw": "{{local}}/users/1/items",
 					"host": [
 						"{{local}}"
 					],
 					"path": [
 						"users",
-						"2",
+						"1",
 						"items"
 					]
 				}
@@ -237,7 +237,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"a User Leo itemm\"\n}",
+					"raw": "{\n    \"title\": \"This is an item\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -245,13 +245,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{local}}/users/2/items",
+					"raw": "{{local}}/users/1/items",
 					"host": [
 						"{{local}}"
 					],
 					"path": [
 						"users",
-						"2",
+						"1",
 						"items"
 					]
 				}

@@ -7,7 +7,7 @@ services:
         # ensure you have also updated ports (below)
         PORT: 5173
         PREVIEW_PORT: 8088
-        VITE_BACKEND_URL: "https://dev.backend.ai/its-fake-lmao"
+        VITE_BACKEND_URL: "http://localhost:8000"
       context: ../fe/
       dockerfile: docker/Dockerfile.dev
     ports:
@@ -37,6 +37,7 @@ services:
         PORT: 8000
         JUPYTERLAB_PORT: 8888
         DATABASE_URL: "postgresql://postgres:postgres@db:5432/postgres"
+        GOOGLE_APPLICATION_CREDENTIALS: "/opt/serviceAccountKey.json"
       dockerfile: docker/Dockerfile.dev
     entrypoint: sh -c "bash scripts/groceries-api-entrypoint.sh && tail -f /dev/null"
     ports:

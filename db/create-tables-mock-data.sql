@@ -1,28 +1,75 @@
-DROP TABLE IF EXISTS items;
-DROP TABLE IF EXISTS notes;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS grocery_list;
+DROP TABLE IF EXISTS user_dek;
 
-create table users
+
+CREATE TABLE user_dek
 (
-id serial primary key,
-email varchar(128) not null,
-hashed_password varchar(255) not null,
-is_active boolean default true
+uid VARCHAR(255),
+encrypted_dek VARCHAR NOT NULL,
+created_ts TIMESTAMPTZ DEFAULT NOW(),
+PRIMARY KEY (uid)
 );
 
-create table notes
+CREATE TABLE grocery_list
 (
-id serial primary key,
-text varchar(255) not null,
-is_completed boolean default false
+id SERIAL,
+uid VARCHAR(255) REFERENCES user_dek(uid),
+encrypted_grocery_item JSON NOT NULL,
+created_ts TIMESTAMPTZ DEFAULT NOW(),
+completed_ts TIMESTAMPTZ DEFAULT NULL,
+PRIMARY KEY (id)
 );
 
+-- mock data
 
-create table items
-(
-id serial primary key,
-title varchar(255) not null,
-description varchar(255),
-owner_id integer REFERENCES users(id)
+-- register a dek
+INSERT INTO user_dek(uid, encrypted_dek)
+VALUES (
+  '123456',
+  '{
+    "ext": true,
+    "key_ops": ["encrypt","decrypt"],
+    "kty": "oct",
+    "alg": "A256GCM",
+    "k":"qDW5QUL_V3hJEDj5P2jRTJyuTM5O_Oc7eLaq_Meu03E"
+  }'
 );
 
+-- add a grocery item
+INSERT INTO grocery_list(uid, encrypted_grocery_item)
+VALUES (
+  '123456', 
+  '{
+    "cipher": "jfdkal;fkdfjsadf",
+    "iv": "fjdkas;vfjdsakfl;dsajf;ds"
+   }'
+);
+
+-- get dek for a user
+SELECT * FROM user_dek as d
+WHERE d.uid = '123456';
+
+-- set a grocery item as completed
+UPDATE grocery_list as gl
+SET completed_ts = NOW()
+WHERE gl.uid = '123456';
+
+-- get all grocery items for a user
+SELECT *
+FROM grocery_list as gl
+WHERE gl.uid= '123456';
+
+
+-- insert a grocery item
+INSERT INTO grocery_list(uid, encrypted_grocery_item)
+VALUES (
+  '123456', 
+  '{
+    "cipher": "jfdkal;fkdfjsadf",
+    "iv": "fjdkas;vfjdsakfl;dsajf;ds"
+   }'
+);
+
+-- delete grocery item
+DELETE FROM grocery_list as gl
+WHERE gl.id = 2;

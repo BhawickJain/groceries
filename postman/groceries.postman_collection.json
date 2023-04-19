@@ -257,6 +257,107 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "post-user-greet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM4MjNkMWE0MTg5ZjI3NThjYWI4NDQ4ZmQ0MTIwN2ViZGZhMjVlMzkiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxMjI4ODk5LCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODEyNDI0NDEsImV4cCI6MTY4MTI0NjA0MSwiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.h2B7aZ9QtQ3iSIp-t3HTSIyQUm1E6T-GIHV6adhfLJRd_1Hm1TG6qweOaXoaOjV27BDZFg7hSVCLF8AWgUg7F35eTQBRZ2vtEh14lUPsdh2E5sy5rceDgKLAAQCzob0VY9FTcUpIehFKK8tzSzM-f2oAM27_MEp6pexm2r4ULEkjzzAGt9mHHkeXfBvMPmlrb5QJyQv1_g1me80l8jgeu2NAuGp1lG2yrKgHyssvFxMxivOjT8_X74yAAvEDdHe5P5lvcvi8tYtlM2Xenvy3rgrH3k_nDeHNea8yXJNBA9IkjpiyNn3HW0XnQ84qDaVZ80Twt2R_Sti0V-znaA9WAw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "1234",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{local}}/users/greet/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"greet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-dek-request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE2ZGE4NmU4MWJkNTllMGE4Y2YzNTgwNTJiYjUzYjUzYjE4MzA3NzMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxMzczNjA4LCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODE2NzEwOTMsImV4cCI6MTY4MTY3NDY5MywiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.TBp0hH8iXKeiVXi_ndxrCCQjIU5RahX2iYgadWc4Z1BYPfF7wUEZULrq65OpcEd-XWsnU_8MccGt2ZIusoPYXjYpxxXexLO8YU0p-0K62iEv41tnt1aT9P3sCfrSrYmxQ6j8MukVcCzSH-h6y728axtPvwp4kzraySOXuLD-INhco_bmf1qaz_9pvpoIXOAJH_CwLDhSnDDwgV7w4aG7vSngzuFdmYYnLma4cqMFEQKFTMau9h7LDCmzVbjKxh7jQbRSql5sBS4EDP6Ni3mGJSAjK_WCroYo8M-zvVX_ZDccCzohFJNvFPJVUGZxJdUwH36KoGw-os22HsE6GRgmsQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dek\": \"1234\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users/register",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-dek-request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE2ZGE4NmU4MWJkNTllMGE4Y2YzNTgwNTJiYjUzYjUzYjE4MzA3NzMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxMzczNjA4LCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODE2NzEwOTMsImV4cCI6MTY4MTY3NDY5MywiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.TBp0hH8iXKeiVXi_ndxrCCQjIU5RahX2iYgadWc4Z1BYPfF7wUEZULrq65OpcEd-XWsnU_8MccGt2ZIusoPYXjYpxxXexLO8YU0p-0K62iEv41tnt1aT9P3sCfrSrYmxQ6j8MukVcCzSH-h6y728axtPvwp4kzraySOXuLD-INhco_bmf1qaz_9pvpoIXOAJH_CwLDhSnDDwgV7w4aG7vSngzuFdmYYnLma4cqMFEQKFTMau9h7LDCmzVbjKxh7jQbRSql5sBS4EDP6Ni3mGJSAjK_WCroYo8M-zvVX_ZDccCzohFJNvFPJVUGZxJdUwH36KoGw-os22HsE6GRgmsQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/users/request-dek",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"request-dek"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [

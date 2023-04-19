@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  fe:
+    container_name: fe
+    extends:
+      file: ../fe/docker/docker-compose.yaml
+      service: fe
+    depends_on:
+      - api
+  api:
+    container_name: api
+    extends:
+      file: ../api/docker/docker-compose.yaml
+      service: api
+    depends_on:
+      - db
+  db:
+    container_name: db
+    extends:
+      file: ../api/docker/docker-compose.yaml
+      service: db
+networks:
+  overlay:
+volumes:
+  db:
+    driver: local

@@ -1,276 +1,13 @@
 {
 	"info": {
-		"_postman_id": "d869f579-c747-406f-8d35-bfe3474c8122",
+		"_postman_id": "0e5d9388-cee1-4cb5-8472-dd64fbc557e7",
 		"name": "groceries",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "create-notes_422_invalid-type",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"text\": \"12345\",\n    \"completed\": \"0\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{local}}/notes",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"notes"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-notes_200",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"text\": \"Setup DB Connection\",\n    \"is_completed\": true\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{local}}/notes/",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"notes",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get-notes_200",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{local}}/notes",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"notes"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get-notes_200_skip2_limit_10",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{local}}/notes/?skip=2&limit=10",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"notes",
-						""
-					],
-					"query": [
-						{
-							"key": "skip",
-							"value": "2"
-						},
-						{
-							"key": "limit",
-							"value": "10"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get-item_404_not_found",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{local}}/items/5",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"items",
-						"5"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get-items",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{local}}/items/",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"items",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get-users-by-id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{local}}/users/2",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"users",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get-users",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{local}}/users/",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"users",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-user",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"email\": \"leo@gmail.com\",\n    \"password\": \"1234!yolo\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{local}}/users/",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"users",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-user-item",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"a User 3f itemm\",\n    \"description\": \"this is my first item for a user\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{local}}/users/1/items",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"users",
-						"1",
-						"items"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create-user-item-null-description",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"title\": \"This is an item\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{local}}/users/1/items",
-					"host": [
-						"{{local}}"
-					],
-					"path": [
-						"users",
-						"1",
-						"items"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "post-user-greet",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM4MjNkMWE0MTg5ZjI3NThjYWI4NDQ4ZmQ0MTIwN2ViZGZhMjVlMzkiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxMjI4ODk5LCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODEyNDI0NDEsImV4cCI6MTY4MTI0NjA0MSwiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.h2B7aZ9QtQ3iSIp-t3HTSIyQUm1E6T-GIHV6adhfLJRd_1Hm1TG6qweOaXoaOjV27BDZFg7hSVCLF8AWgUg7F35eTQBRZ2vtEh14lUPsdh2E5sy5rceDgKLAAQCzob0VY9FTcUpIehFKK8tzSzM-f2oAM27_MEp6pexm2r4ULEkjzzAGt9mHHkeXfBvMPmlrb5QJyQv1_g1me80l8jgeu2NAuGp1lG2yrKgHyssvFxMxivOjT8_X74yAAvEDdHe5P5lvcvi8tYtlM2Xenvy3rgrH3k_nDeHNea8yXJNBA9IkjpiyNn3HW0XnQ84qDaVZ80Twt2R_Sti0V-znaA9WAw",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [
 					{
@@ -297,16 +34,6 @@
 		{
 			"name": "post-dek-request",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE2ZGE4NmU4MWJkNTllMGE4Y2YzNTgwNTJiYjUzYjUzYjE4MzA3NzMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxMzczNjA4LCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODE2NzEwOTMsImV4cCI6MTY4MTY3NDY5MywiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.TBp0hH8iXKeiVXi_ndxrCCQjIU5RahX2iYgadWc4Z1BYPfF7wUEZULrq65OpcEd-XWsnU_8MccGt2ZIusoPYXjYpxxXexLO8YU0p-0K62iEv41tnt1aT9P3sCfrSrYmxQ6j8MukVcCzSH-h6y728axtPvwp4kzraySOXuLD-INhco_bmf1qaz_9pvpoIXOAJH_CwLDhSnDDwgV7w4aG7vSngzuFdmYYnLma4cqMFEQKFTMau9h7LDCmzVbjKxh7jQbRSql5sBS4EDP6Ni3mGJSAjK_WCroYo8M-zvVX_ZDccCzohFJNvFPJVUGZxJdUwH36KoGw-os22HsE6GRgmsQ",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -334,16 +61,6 @@
 		{
 			"name": "get-dek-request",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE2ZGE4NmU4MWJkNTllMGE4Y2YzNTgwNTJiYjUzYjUzYjE4MzA3NzMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxMzczNjA4LCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODE2NzEwOTMsImV4cCI6MTY4MTY3NDY5MywiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.TBp0hH8iXKeiVXi_ndxrCCQjIU5RahX2iYgadWc4Z1BYPfF7wUEZULrq65OpcEd-XWsnU_8MccGt2ZIusoPYXjYpxxXexLO8YU0p-0K62iEv41tnt1aT9P3sCfrSrYmxQ6j8MukVcCzSH-h6y728axtPvwp4kzraySOXuLD-INhco_bmf1qaz_9pvpoIXOAJH_CwLDhSnDDwgV7w4aG7vSngzuFdmYYnLma4cqMFEQKFTMau9h7LDCmzVbjKxh7jQbRSql5sBS4EDP6Ni3mGJSAjK_WCroYo8M-zvVX_ZDccCzohFJNvFPJVUGZxJdUwH36KoGw-os22HsE6GRgmsQ",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -358,8 +75,131 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "post-add-grocery-item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"encrypted_grocery_item\": {\"cipher\": \"jdka;fjkda\", \"iv\": \"fdjkal;fjdak\"},\n    \"created_ts\": \"2023-04-20T16:57:00.611Z\",\n    \"last_updated_ts\": \"2023-04-20T16:57:00.611Z\",\n    \"completed_ts\": \"2023-04-20T16:57:00.611Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/g",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-add-grocery-item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 24\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/g",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-get-grocery-item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/g/17",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"g",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-get-grocery-all-items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/g",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put-update-grocery-item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 21,\n    \"encrypted_grocery_item\": {\"cipher\": \"CHNAGED\", \"iv\": \"fdjkal;fjdak\"},\n    \"created_ts\": \"2023-04-20T16:57:00.611Z\",\n    \"last_updated_ts\": \"2023-04-20T16:57:00.611Z\",\n    \"completed_ts\": \"2023-04-20T16:57:00.611Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/g",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"g"
+					]
+				}
+			},
+			"response": []
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE2ZGE4NmU4MWJkNTllMGE4Y2YzNTgwNTJiYjUzYjUzYjE4MzA3NzMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQmhhd2ljayBKYWluIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FHTm15eFpPQ3JxSlZ5cjZsZ0dEM0EwTm83aDVaa0lHazJRck8weURpbmp3elE9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ3JvY2VyaWVzLTYxMTM0IiwiYXVkIjoiZ3JvY2VyaWVzLTYxMTM0IiwiYXV0aF90aW1lIjoxNjgxODMwMjkwLCJ1c2VyX2lkIjoiNG40TGlaTVhSemFNWkNwUEJkUlN5Q0JGNVBGMiIsInN1YiI6IjRuNExpWk1YUnphTVpDcFBCZFJTeUNCRjVQRjIiLCJpYXQiOjE2ODIwMTI1MTcsImV4cCI6MTY4MjAxNjExNywiZW1haWwiOiJiaGF3aWNrQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAyMzk3ODA0OTg0MjEwMjE3OTM5Il0sImVtYWlsIjpbImJoYXdpY2tAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.FlCy7A7cfIdId--FhZkKfyo7VfGyIR8c4Pk62Qn5JTDOTNllKGMbkpKe6jiVnwIXZkO_rR27_mPiaTNmZggCpMPs2lW7T9MbYqA9NVgVDRHuG7iaWS0WiqQmYF1OXbRKUTESnq5vcWLI64o_P9zlGokIPYfBnUGqvCNYwHLyVy_JrYR8DcxHnCfmnoqadAWKdgEqzFidsXh53r7cCYXHODi74bQHmdLIPBCXfTLhNKtHW8JDEUYTaCcYFfTKanJdBz18HJhXWPn_ER0R1vC4fkkNhSdRp64OBsZoHn4zqM8KNI_N6cj-oLVexmS6GkmhJDEWogb4IEUkuKj7sVderA",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",

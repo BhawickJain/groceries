@@ -1,0 +1,6 @@
+[submodule "api"]
+	path = api
+	url = git@github.com:BhawickJain/groceries-api.git
+[submodule "fe"]
+	path = fe
+	url = git@github.com:BhawickJain/groceries-fe.git

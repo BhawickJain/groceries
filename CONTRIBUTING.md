@@ -2,11 +2,14 @@
 
 This project has the `api` and `frontend` repositories as `git submodules` for easier setup and development. Use the following command to clone this repo and each of the services.
 
+You will notice that both submodules have an `@ <commit-SHA>` which is the `commit-SHA` that is set as the `HEAD` of the default branch (i.e. the latest commit).
+
+If the `git submodule` command is new, the following are some common commands that will be useful whilst contributing.
+
+__clone this project__
 ```bash
 $ git clone --recurse-submodules git@github.com:BhawickJain/groceries.git
 ```
-
-If the `git submodule` command is new, the following are some common commands that will be useful whilst contributing.
 
 __update submodules__
 You can go into each individual repo and merge new commits, however you can also use the `git submodule` command to do this. 

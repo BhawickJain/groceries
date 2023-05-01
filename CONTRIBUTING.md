@@ -11,7 +11,7 @@ If the `git submodule` command is new, the following are some common commands th
 __update submodules__
 You can go into each individual repo and merge new commits, however you can also use the `git submodule` command to do this. 
 ```bash
-$ git submodule update --remote
+$ git submodule update --init --recursive
 ```
 The command will checkout the `default` branch of the submodule, or the one defined in the `.gitmodules` file, and merge new commits.
 

@@ -25,3 +25,5 @@ $ git config -f .gitmodules submodule.api.branch stable
 ```
 Running this command will update the `.gitmodule` which means the change, if committed, will affect all developers who clone or merge your changes. In general, if you need to change the branch of a `submodule`, `cd` and `checkout` is the easiest most familiar option and won't affect anyone else.
 
+For more information refer to the guides in [github docs](https://github.blog/2016-02-01-working-with-submodules/) and official [git docs](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+

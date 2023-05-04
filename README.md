@@ -1,5 +1,12 @@
 # Groceries
 
+<hr>
+<p align='center'>
+🚧 The services under the project are currently private, but you can raise issues against this repo so I can triage them. 🚧
+</p>
+<hr>
+
+
 | Services							 						                      		    |   Status       |   Deployment       |
 | :---															                        	    |     :---       |     :---       |
 | **[frontend](https://github.com/BhawickJain/groceries-fe)**     | [![frontend CI status badge](https://github.com/BhawickJain/groceries-fe/actions/workflows/ci.yaml/badge.svg)](https://github.com/BhawickJain/groceries-fe/actions/workflows/ci.yaml)  [![frontend Deploy status badge](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml/badge.svg)](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml) | [`frontend/prod`](https://bhawickjain.github.io/groceries-fe/)

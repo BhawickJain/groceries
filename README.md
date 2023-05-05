@@ -16,6 +16,7 @@ A full-stack app that allows you to track your grocery shopping. This Repo holds
 ## Overview
 
 __App Architectural Diagram__
+![architectural diagram of the grocery app](./docs/img/arch.svg)
 
 ### Frontend
 

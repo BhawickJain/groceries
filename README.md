@@ -32,6 +32,7 @@ __App Architectural Diagram__
 
 #### Database Design
 ![db design](./docs/img/db.svg)
+
 ### Client-Side Encryption Strategy
 ![user-side encryption workflow with registration](./docs/img/dek.svg)
 

@@ -31,7 +31,9 @@ __App Architectural Diagram__
 <img src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" alt="Python" height=17> <img src="https://img.shields.io/badge/railway-railway?style=flat&logo=railway&logoColor=white&color=black" alt="Railway" height=17> <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white" alt="Postgres" height=17> <img src="https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi" alt="Postgres" height=17>
 
 #### Database Design
+![db design](./docs/img/db.svg)
 ### Client-Side Encryption Strategy
+![user-side encryption workflow with registration](./docs/img/dek.svg)
 
 
 <hr>

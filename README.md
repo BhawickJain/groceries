@@ -8,6 +8,7 @@
 
 | Services	|   Status    |   Deployment   |
 | :---	    |   :---      |   :---         |
+| **[frontend](https://github.com/BhawickJain/groceries-fe)**     | <picture><source srcset="https://github.com/BhawickJain/groceries-fe/actions/workflows/ci.yaml/badge.svg"><img src="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png" alt='frontend CI status badge'></picture>  [![frontend Deploy status badge](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml/badge.svg)](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml) | [`frontend/prod`](https://bhawickjain.github.io/groceries-fe/)
 | **[frontend](https://github.com/BhawickJain/groceries-fe)**     | [![frontend CI status badge](https://github.com/BhawickJain/groceries-fe/actions/workflows/ci.yaml/badge.svg)](https://github.com/BhawickJain/groceries-fe/actions/workflows/ci.yaml)  [![frontend Deploy status badge](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml/badge.svg)](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml) | [`frontend/prod`](https://bhawickjain.github.io/groceries-fe/)
 | **[backend](https://github.com/BhawickJain/groceries-api)**     | [![backend CI status badge](https://github.com/BhawickJain/groceries-api/actions/workflows/ci.yml/badge.svg)](https://github.com/BhawickJain/groceries-api/actions/workflows/ci.yml) | [`api/prod/docs`](https://groceries-api-prod.up.railway.app/docs)
 

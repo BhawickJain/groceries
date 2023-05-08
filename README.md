@@ -20,14 +20,26 @@ __App Architectural Diagram__
 ![architectural diagram of the grocery app](./docs/img/arch.svg)
 
 __User ID Authorisation JWT Token with each request__
+
 ![jwt token interaction](./docs/img/jwt.svg)
 
 ### Frontend
 
 <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" alt="Typescript" height=17> <img src="https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB" alt="React" height=17> <img src="https://img.shields.io/badge/github%20pages-121013?style=flat&logo=github&logoColor=white" alt="GitHub Pages" height=17> <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white" alt="Next JS" height=17> <img src="https://img.shields.io/badge/-jest-%23C21325?style=flat&logo=jest&logoColor=white" alt="Jest" height=17>
 
-### React Component Breakdown
 #### UI Wireframe
+
+__main functionality__
+
+![main ui framework](./docs/img/sketch-ui-wireframe.svg)
+
+__shop mode__
+
+![shop mode](./docs/img/sketch-shop-mode.svg)
+
+__UI interaction workflow in shop mode__
+
+![sketch of ui interaction during shop mode](./docs/img/sketch-ui-interaction-during-shop-mode.svg)
 
 ### Backend
 <img src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" alt="Python" height=17> <img src="https://img.shields.io/badge/railway-railway?style=flat&logo=railway&logoColor=white&color=black" alt="Railway" height=17> <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white" alt="Postgres" height=17> <img src="https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi" alt="Postgres" height=17>

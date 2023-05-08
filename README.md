@@ -29,11 +29,9 @@ __User ID Authorisation JWT Token with each request__
 
 #### UI Wireframe
 
-__main functionality__
-
 ![main ui framework](./docs/img/sketch-ui-wireframe.svg)
 
-__shop mode__
+__Shop mode__
 
 ![shop mode](./docs/img/sketch-shop-mode.svg)
 

@@ -13,6 +13,10 @@
 
 A full-stack app that allows you to track your grocery shopping. This repository holds the `docker-compose` setup to spin up the local development environment.
 
+>__In development 👷🏾__
+>
+>The project is currently under development, and the services powering the app are currently private repositories. You can however visit the [CONTRIBUTING.md](./CONTRIBUTING.md) article to see how I use Docker containers and Git Submodules to make development easier to setup and reproducible.
+
 ## Overview
 
 __App Architectural Diagram__

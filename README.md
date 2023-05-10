@@ -6,10 +6,10 @@
 </p>
 <hr>
 
-| Services	|   Status    |   Deployment   |
-| :---	    |   :---      |   :---         |
-| **[frontend](https://github.com/BhawickJain/groceries-fe)**     | [![frontend CI status badge unavailable](https://img.shields.io/static/v1?label=&message=CI%20status%20unavailable&color=lightgray&labelColor=gray&style=flat&logo=github&logoColor=lightgray)](https://github.com/BhawickJain/groceries-fe/actions/workflows/ci.yaml)  [![frontend Deploy status badge unavailable](https://img.shields.io/static/v1?label=&message=Deploy%20status%20unavailable&color=lightgray&labelColor=gray&style=flat&logo=github&logoColor=lightgray)](https://github.com/BhawickJain/groceries-fe/actions/workflows/cd.yaml) | [`frontend/prod`](https://bhawickjain.github.io/groceries-fe/)
-| **[backend](https://github.com/BhawickJain/groceries-api)**     | [![backend CI status badge unavailable](https://img.shields.io/static/v1?label=&message=CI%20status%20unavailable&color=lightgray&labelColor=gray&style=flat&logo=github&logoColor=lightgray)](https://github.com/BhawickJain/groceries-api/actions/workflows/ci.yml) | [`api/prod/docs`](https://groceries-api-prod.up.railway.app/docs)
+| Services	|   Deployment   |
+| :---	    |   :---         |
+| **[frontend](https://github.com/BhawickJain/groceries-fe)**     | [`frontend/prod`](https://bhawickjain.github.io/groceries-fe/)
+| **[backend](https://github.com/BhawickJain/groceries-api)**     | [`api/prod/docs`](https://groceries-api-prod.up.railway.app/docs)
 
 A full-stack app that allows you to track your grocery shopping. This repository holds the `docker-compose` setup to spin up the local development environment.
 

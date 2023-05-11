@@ -1,4 +1,4 @@
-# Groceries
+<h1> <img src='./grocery-logo.svg' width='45rem'/> The Groceries App</h1>
 
 <hr>
 <p align='center'>
